@@ -1,0 +1,56 @@
+baseURL = "https://cs-neil.github.io/Artist/"
+title = "日常电影"
+theme = "gallery"
+copyright = "© CS-Neil"
+
+defaultContentLanguage = "zh"
+locale = "zh-CN"
+hasCJKLanguage = true
+timeZone = "Asia/Shanghai"
+
+# 不生成分类列表页；如需按 categories 浏览相册，删掉这一行
+disableKinds = ["taxonomy"]
+enableRobotsTXT = true
+timeout = "120s"
+
+[params]
+  # 整站默认暗色，单个相册可在 front matter 里用 params.theme 覆盖
+  defaultTheme = "dark"
+  title = "日常电影"
+  description = "用镜头定格日常的动容瞬间，以电影的方式记录一生。"
+  [params.author]
+    name = "CS-Neil"
+  [params.socialIcons]
+    github = "https://github.com/CS-Neil"
+    # instagram = "https://www.instagram.com/<your_account>/"
+    # email = "mailto:<your_email>"
+  [params.gallery]
+    # 相册瀑布流的行高等参数，可按需调整
+    # boxSpacing = 10
+    # targetRowHeight = 288
+    # targetRowHeightTolerance = 0.25
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  resampleFilter = "CatmullRom"
+  [imaging.jpeg]
+    quality = 80
+  [imaging.exif]
+    disableDate = false
+    # 不读取 GPS 坐标，避免泄露拍摄地点
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[menu]
+  [[menu.footer]]
+    name = "GitHub"
+    url = "https://github.com/CS-Neil/Artist"
+    weight = 1
+
+[services]
+  [services.rss]
+    limit = 100

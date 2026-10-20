@@ -1,4 +1,11 @@
-# 艺术家参考资料索引
+---
+title: 灵感 · 艺术家
+layout: prose
+rss_ignore: true
+menu:
+  main:
+    weight: 80
+---
 
 按「摄影 → 绘画 → 雕塑/装置 → 音乐」分类，每类先列大师，再列新锐。
 
